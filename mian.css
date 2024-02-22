@@ -1,0 +1,541 @@
+:root{
+    --main-color: #d3ad7f;
+    --black: #e14b4b;
+    --bg:#6dc0d7;
+    --border: .1rem solid rgba(255,255,255,.3);
+    
+}
+
+.{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 100%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-around; /* Adjust this to change the space between links */
+    align-items: center;
+    
+    color: #fff;
+    padding: 20px 90;
+}
+
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 25px;
+    transition: background-color 0.3s ease;
+}
+
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 5rem;
+}
+
+body{
+    background: var(--bg);
+}
+
+section{
+    padding: 2rem 7%;
+}
+
+.header{
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+}
+
+.header .navbar a{
+    margin: 0 1 rem;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.header .navbar a:hover{
+    color:var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+#menu-btn(
+    display: none;
+)
+
+.header .search-form{
+    position: absolute;
+    top: 115%; right 7%;
+    background: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+}
+
+
+.header .search-form input{
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 1rem;
+    text-transform: none;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-form input[type="search"] {
+    padding: 8px 35px; /* Adjust padding to make the input thinner */
+    font-size: 14px; /* Adjust font size */
+    height: 30px; /* Adjust input height */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-form label {
+    margin-left: -30px; /* Adjust margin to align the icon properly */
+    color: #666;
+    cursor: pointer;
+}
+
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: var(--big)  url('images/clinicimg.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+}
+
+.header {
+    position: relative;
+}
+
+.header h3 {
+    position: absolute;
+    top: -350%;
+    left: 0;
+}
+
+
+.home .content {
+    max-width: 60rem;
+    margin-top: -18%;
+}
+
+.home .content h3 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.home .content p {
+    font-size: 1.2rem;
+    font-weight: lighter;
+    line-height: 1.8;
+    padding: 1rem 0;
+    color: #eee;
+    position: relative; /* Add this line */
+    top: -70px; /* Adjust the value accordingly */
+}
+
+.remaining {
+    position: relative;
+    top: -10px; /* Adjust the value accordingly to move the paragraph higher */
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+.image-container {
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 10px; /* Adjust as needed */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add a shadow for a nice effect */
+    position: relative;
+    top: -7.5rem;
+}
+
+.image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #d3ad7f;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    top: -80px;
+}
+
+.btn:hover {
+    background-color: #e5c487; /* Change to a lighter shade or different color on hover */
+}
+/* home selection end */
+
+/* doctore section start */
+/* Apply necessary styles to the container */
+
+.header1{
+    font-size: 4rem;
+    padding: 80px 0;
+    text-align: center;
+}
+.doctor-section {
+    position: relative;
+    overflow: hidden;
+    margin-top: -10%;
+}
+
+/* Style for the doctor-info container */
+.doctor-info {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -10%;
+    padding: 200px;
+    width: 50%; /* Adjust the width as per your design */
+    
+    animation: fade-in 1.5s ease; /* Fading animation */
+}
+
+/* Define the fading animation */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Style for the doctor image */
+.doctor-image {
+    position: relative;
+    width: 30%; /* Adjust the width as per your design */
+    height: auto;
+    float: right; /* Float image to the right */
+    overflow: hidden;
+    animation: slide-in 1.5s ease; /* Animation for the image */
+    border-radius: 10px; /* Adjust as needed */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
+}
+
+/* Define the sliding animation for the image */
+@keyframes slide-in {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Optional: Add styles for the image if needed */
+.doctor-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 1.5s ease; /* Add transition effect to the image */
+}
+/* doctor section end */
+
+/* service section start */
+.services-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.services-section h2 {
+    margin-bottom: 60px;
+    font-size: 48px;
+    color: #333;
+}
+
+.service {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.service-icon {
+    width: 120px;
+    height: 120px;
+    margin-right: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    color: #8c72ff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-icon img {
+    width: 80%;
+    height: auto;
+}
+
+.service:hover .service-icon {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.service-info {
+    text-align: left;
+}
+
+.service h3 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: #333;
+}
+
+.service p {
+    margin-bottom: 0;
+    font-size: 18px;
+    color: #666;
+}
+
+/* contact start */
+.contact {
+    background-color: #56c6f3;
+    padding: 50px 0;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.contact .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact .row .map {
+    flex: 1 1 400px;
+    height: 300px; /* Adjust the height as needed */
+    display: block;
+    border: none;
+}
+
+.contact .row .form-container {
+    flex: 1 1 400px;
+}
+
+.contact .row form {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact .row form h3 {
+    margin-top: 0;
+    text-transform: uppercase;
+    font-size: 24px;
+    color: #333;
+}
+
+.contact .row form .inputBox {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.contact .row form .inputBox input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact .row form .inputBox input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.contact .row form .inputBox span {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #777;
+}
+
+.contact .row form .btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+}
+
+.contact .row form .btn:hover {
+    background-color: #0056b3;
+}
+
+.contact .contact-info {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact .contact-info h3 {
+    margin-top: 0;
+    text-transform: uppercase;
+    font-size: 24px;
+    color: #333;
+}
+
+.contact .contact-info p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+#contactNowBtn {
+    margin-top: 100px; /* Adjust the margin-top value as needed */
+}
+
+#toggleMapBtn {
+    margin-top: 10px; /* Adjust the margin-top value as needed */
+}
+
+.about-clinic {
+    background-color: #f8f8f8;
+    padding: 80px 0;
+    cursor: pointer; /* Add cursor pointer for indicating the clickable area */
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: transform 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.about-clinic:hover {
+    transform: translateY(-5px); /* Add a slight lift effect on hover */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.col-left, .col-right {
+    flex: 1;
+}
+
+.col-left {
+    padding-right: 40px;
+}
+
+.col-right {
+    text-align: center;
+}
+
+h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 15%;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+
